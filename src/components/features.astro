@@ -19,15 +19,7 @@ const features: Array<FeatureItem> = [
   {
     title: "Feature Engineering",
     description:
-    "REPLACE 2: Starting with a 3D scan of a recyclable object using a custom scanning platform with ArUco-labeled corners for automatic extraction.\n" +
-    "Applying a physics model in Blender to partially crush objects, depending on their class.\n" +
-    "Generating background-free images from the 3D models for image augmentation.\n" +
-    "Training a CycleGAN model with existing recycling data to improve data quality by making synthetic object images resemble real data.\n" +
-    "Superimposing processed object images onto existing images of the recycling conveyor belt and generating label sets from existing bounding boxes without human intervention.\n" +
-    "Synthetic Data Generation:\n\n" +
-    "Highlighting the growing importance of training data availability as computer vision models become more powerful.\n" +
-    "Emphasizing that synthetic data generation can mitigate the high costs and diminishing returns of expanding datasets.\n" +
-    "Suggesting that similar synthetic data techniques could benefit other AI tools, such as large language models (LLMs).\n",
+        "Our aim is to generate realistic synthetic training images from scanned objects to increase dataset size and scope. Our process begins with a 3D scan of a recyclable object. We developed a scanning platform with ArUco-labeled corners so that the object can be automatically extracted. Depending on its class, the model may be partially crushed using a physics model in Blender. We generate background-free images from the model that we use for image augmentation. We trained a CycleGAN model with existing recycling data to increase data quality. The objects we used to train it are removed from the training data using Segment Anything and cropped around their bounding box. CycleGAN is used to make each synthetic object image look more like the observed data. These processed object images are superimposed onto existing images of the recycling conveyor belt. The label set is generated from the existing bounding boxes, avoiding any human intervention.",
     icon: "mdi:psychology",
   },
 ];
