@@ -7,7 +7,7 @@ const features: Array<FeatureItem> = [
   {
     title: "Deployment",
     description:
-      "Models trained in the cloud need to be deployed to devices in recycling centers. After downloading a model from the server on AWS, we use OpenVINO to convert the downloaded model to an ONNX format for use on the IGPU. Then, the IGPU can be used to identify and count types of recycled objects in the live recycling video feed. When counting object types, deployment uses a library named Supervision (with a Kalman filter underneath) to keep accurate counts and report those to the cloud.",
+      "Models trained in the cloud need to be deployed to devices in recycling centers. After downloading a model from the server on AWS, we use OpenVINO to convert the downloaded model to an ONNX format for use on the IGPU. Then, the IGPU can be used to identify and count types of recycled objects in the live recycling video feed. When counting object types, deployment uses a library named Supervision (with a Kalman filter underneath) to keep accurate counts and report those to the cloud. After estimating which objects are occluding other objects, the program determines the optimal pickup order for a potential robotic arm that may assist in sorting recycling in the future.",
     icon: "mdi:rocket-launch",
   },
   {
